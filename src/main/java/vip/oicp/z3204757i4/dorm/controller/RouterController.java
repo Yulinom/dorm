@@ -14,4 +14,9 @@ public class RouterController {
     public String index(){
         return "index";
     }
+
+    @RequestMapping("/student-list")
+    public String studentList(){
+        return "student-list";
+    }
 }

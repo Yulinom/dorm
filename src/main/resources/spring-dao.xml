@@ -21,8 +21,9 @@
 
     </bean>
 
-    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+    <bean id="sqlSessionFactory" class="com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
+        <!--mybatis配置文件地址-->
         <property name="configLocation" value="classpath:mybatis-configure.xml"/>
     </bean>
 

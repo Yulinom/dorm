@@ -73,7 +73,7 @@
                         <!--2、属性data-title（选项卡标题）-->
                         <!--3、属性data-id必须唯一，tab选项卡根据这个值进行切换-->
                         <!--4、id，也必须唯一，这里id设置为default-tab，设置该选项卡为默认显示的-->
-                        <a href="#" data-url="list" data-title="学生列表" data-id="11" id="default-tab" class="site-demo-active"
+                        <a href="#" data-url="student-list" data-title="学生列表" data-id="11" id="default-tab" class="site-demo-active"
                            data-type="tabAdd">
                             学生列表
                         </a>
@@ -189,7 +189,7 @@
                     title: name,
                     // TODO
                     // 这里的选项卡页面路径：  src="' + url + '.html"  ，可能需要根据自己项目实际的后缀名修改
-                    content: '<iframe data-frameid="' + id + '" scrolling="auto" frameborder="0" src="' + url + '.html" style="width:100%;height:99%;"></iframe>',
+                    content: '<iframe data-frameid="' + id + '" scrolling="auto" frameborder="0" src="/' + url + '" style="width:100%;height:99%;"></iframe>',
                     id: id // 规定好的id
                 })
                 CustomRightClick(id); // 自定义函数，给tab绑定右击事件
