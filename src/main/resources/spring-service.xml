@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd ">
+
+    <context:component-scan base-package="vip.oicp.z3204757i4.dorm.service"/>
+
+<!--    <bean id="BookServiceImpl" class="ml.ulinom.service.BookServiceImpl">-->
+<!--        <property name="bookMapper" ref="bookMapper"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="UserServiceImpl" class="ml.ulinom.service.UserServiceImpl">-->
+<!--        <property name="userMapper" ref="userMapper"/>-->
+<!--    </bean>-->
+
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+</beans>

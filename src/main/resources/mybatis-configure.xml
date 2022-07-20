@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <typeAliases>
+        <package name="vip.oicp.z3204757i4.dorm.entity"/>
+    </typeAliases>
+
+    <mappers>
+        <mapper class="vip.oicp.z3204757i4.dorm.mapper.DormMapper"/>
+        <mapper class="vip.oicp.z3204757i4.dorm.mapper.StudentMapper"/>
+    </mappers>
+
+
+</configuration>
