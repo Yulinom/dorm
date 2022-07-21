@@ -15,7 +15,7 @@
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
                 <a href="javascript:;">
-                    <img src="./images/user3.png" class="layui-nav-img">
+                    <i class="layui-icon layui-icon-user"></i>
                     小米
                 </a>
                 <dl class="layui-nav-child">

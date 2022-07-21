@@ -14,7 +14,7 @@ public class ResultVO {
     private Integer code;
 
     @ApiModelProperty(value = "返回消息")
-    private String message;
+    private String msg;
 
     @ApiModelProperty(value = "返回数据")
     private Map<String, Object> data = new HashMap<String, Object>();
@@ -27,7 +27,7 @@ public class ResultVO {
         ResultVO resultVo=new ResultVO();
         resultVo.setSuccess(true);
         resultVo.setCode(ResultCode.SUCCESS);
-        resultVo.setMessage("成功");
+        resultVo.setMsg("成功");
         return resultVo;
     }
     //失败静态方法
@@ -35,7 +35,7 @@ public class ResultVO {
         ResultVO resultVo=new ResultVO();
         resultVo.setSuccess(false);
         resultVo.setCode(ResultCode.ERROR);
-        resultVo.setMessage("失败");
+        resultVo.setMsg("失败");
         return resultVo;
     }
 
@@ -45,7 +45,7 @@ public class ResultVO {
 
     }
     public ResultVO message(String message){
-        this.setMessage(message);
+        this.setMsg(message);
         return this;
     }
 
