@@ -18,12 +18,24 @@
     <mvc:default-servlet-handler/>
 <!--    3.扫描包-->
     <context:component-scan base-package="vip.oicp.z3204757i4.dorm.controller"/>
-<!--    <context:component-scan base-package="ml.ulinom.aspect"/>-->
 <!--    4.视图解析器-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
+
+    <!-- 配置拦截器 -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!-- 拦截所有ywjb目录下面的页面 -->
+            <mvc:mapping path="/**"/>
+            <!-- mvc:exclude-mapping是另外一种拦截，它可以在你后来的测试中对某个页面进行不拦截，这样就不用在
+                LoginInterceptor的preHandler方法里面获取不拦截的请求uri地址了(优选) -->
+            <mvc:exclude-mapping path="/test" />
+            <bean class="vip.oicp.z3204757i4.dorm.utils.LoginInterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
 
     <aop:aspectj-autoproxy proxy-target-class="true"/>
 </beans>

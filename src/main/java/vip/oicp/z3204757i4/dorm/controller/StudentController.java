@@ -15,8 +15,6 @@ import vip.oicp.z3204757i4.dorm.entity.vo.StudentQueryVO;
 import vip.oicp.z3204757i4.dorm.service.StudentService;
 import vip.oicp.z3204757i4.dorm.utils.ResultVO;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -75,7 +73,7 @@ public class StudentController {
     @PostMapping("/pageStudentCondition")
     public ResultVO pageStudentCondition(@RequestBody(required = false) StudentQueryVO studentQueryVO){
         //创建page对象
-        Page<Student> teacherPage =new Page<>(studentQueryVO.getPage(),studentQueryVO.getLimit());
+        Page<Student> studentPage =new Page<>(studentQueryVO.getPage(),studentQueryVO.getLimit());
         //构建条件
         QueryWrapper<Student> wrapper = new QueryWrapper<>();
         //多条件组合查询
@@ -89,12 +87,12 @@ public class StudentController {
             wrapper.eq("id", id);
         }
         //调用方法实现分页
-        //调用方法时，底层封装，把分页所有数据封装到teacherPage对象里面
-        studentService.page(teacherPage,wrapper);
+        //调用方法时，底层封装，把分页所有数据封装到studentPage对象里面
+        studentService.page(studentPage,wrapper);
         //总记录数
-        long total = teacherPage.getTotal();
+        long total = studentPage.getTotal();
         //数据list集合
-        List<Student> records = teacherPage.getRecords();
+        List<Student> records = studentPage.getRecords();
         Map map=new HashMap();
         map.put("count",total);
         map.put("item",records);
