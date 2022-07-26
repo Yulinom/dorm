@@ -15,7 +15,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         if (request.getSession().getAttribute("token") != null) return true;
         else {
             //登录失败，跳转到登录页，这里暂时跳到/test页
-            response.sendRedirect("/test");
+            response.sendRedirect("/");
             return false;
         }
     }

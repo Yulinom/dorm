@@ -92,6 +92,7 @@
                     </dd>
 
                     <dd>
+
                         <!--TODO -->
                         <!--需要修改为自己项目的部分：-->
                         <!--1、属性data-url（需要在右边选项卡中打开的页面的路径）  -->
@@ -117,9 +118,9 @@
                         <!--1、属性data-url（需要在右边选项卡中打开的页面的路径）  -->
                         <!--2、属性data-title（选项卡标题）-->
                         <!--3、属性data-id必须唯一，tab选项卡根据这个值进行切换-->
-                        <a href="#" data-url="profile" data-title="个人资料" data-id="44" class="site-demo-active"
+                        <a  data-url="dorm-edit" data-title="宿舍分配" data-id="44" class="site-demo-active"
                            data-type="tabAdd">
-                            个人资料
+                            宿舍分配
                         </a>
                     </dd>
 

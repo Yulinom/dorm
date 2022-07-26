@@ -16,11 +16,16 @@ public class RouterController {
     @RequestMapping("/")
     public String index(HttpSession session) {
         session.setAttribute("token", UUID.randomUUID());
-        return "index";
+        return "login";
     }
 
     @RequestMapping("/student-list")
     public String studentList() {
         return "student-list";
+    }
+
+    @RequestMapping("/dorm-edit")
+    public String dormedit() {
+        return "dormedit";
     }
 }
